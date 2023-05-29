@@ -17,3 +17,12 @@ def quote_fetcher():
         'author':1
     })
     return(list(quotes))
+
+def limited_quote_fetcher(limit_value):
+    limit_value = int(limit_value)
+    # Fetch quotes from MongoDB
+    quotes = collection.find({},{
+        'quote': 1,
+        'author':1
+        }).limit(limit_value)
+    return(list(quotes))
