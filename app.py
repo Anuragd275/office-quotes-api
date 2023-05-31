@@ -1,11 +1,11 @@
 from flask import *
 import json, time
-import random as rand # Yes I knew, What I was doing :)
+import random as ran
 from db import *
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def home_page():
     return render_template('index.html')
 
@@ -31,6 +31,35 @@ def user_page():
     json_dump = json.dumps(data_set)
     return json_dump
 
+@app.route('/add/', methods=['GET', 'POST'])
+def add_quote():
+    if request.method == 'POST':
+        quote = request.form.get('quote')
+        author = request.form.get('author')
+        
+        # Insert the values into MongoDB
+        collection.insert_one({'quote': quote, 'author': author})
+
+        # Redirect to a success page or render a success message
+        return 'Values inserted successfully'
+    
+    # Render the HTML form
+    return render_template('add_quote.html')
+
+@app.route('/delete/', methods=['GET', 'POST', 'DELETE'])
+def delete_quote():
+    if request.method == 'POST':
+        quote_id = request.form.get('ID')
+
+        # Delete the quote from MongoDB
+        collection.delete_one({'_id': f"ObjectId('{quote_id}')"})
+
+        # Redirect to a success page or render a success message
+        return (f"Deleted this: ObjectId('{quote_id}')")
+    
+    # Render the HTML form
+    return render_template('delete_quote.html')
+
+
 if __name__ == '__main__':
     app.run(port=5600)
-# You can use default port ^
