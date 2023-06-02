@@ -5,18 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Office Quotes API</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+    
     <style>
-        h1,h2,h3{
-            font-family: montserrat;
-            font-size: larger;
+        h1, h2, h3, ul{
+            font-family: Inter, sans-serif;
+        }
+
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a, ul, li{
+            text-decoration: none;
+            color: #5256f4;
+        }
+
+        li{
+            font-size: 1.4rem;
+        }
+
+        a:visited{
+            color: #5256f4;
+        }
+
+        footer{
+            font-family: Inter, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 5rem;
+        }
+
+        #footer-link{
+            padding: 1rem 2rem;
+            border: 2px solid #000;
         }
     </style>
+
+
 </head>
 <body>
     <div class="wrapper">
-        <h1>Office Quotes API</h1>
-        <h2>How to use it?</h2>
-        <h3>Send a get request at this end point: "https://office-quotes-api.onrender.com/quote/"</h3>
+       <h1>Office Quotes API</h1>
+       <h2>All available Endpoints of API:</h2>
+       <ul>
+            <li><a href="https://office-quotes-api.onrender.com/quote/" target="_blank">Get all Quotes</a></li>
+            <li><a href="https://office-quotes-api.onrender.com/limit/?limit=5" target="_blank">Get limited Quotes</a></li>
+            <li><a href="https://office-quotes-api.onrender.com/quote/user/" target="_blank">User Endpoint</a></li>
+            <li><a href="https://office-quotes-api.onrender.com/add/" target="_blank">Add new Quotes</a></li>
+            <li><a href="https://office-quotes-api.onrender.com/delete/" target="_blank">Delete quotes</a></li>
+       </ul>
     </div>
+    <footer>
+        <div>
+            <a href="https://github.com/Anuragd275/office-quotes-api" id="footer-link">GitHub Repo</a>
+        </div>
+    </footer>
 </body>
 </html>
