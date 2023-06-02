@@ -1,0 +1,8 @@
+Add your quotes and author to merge them-
+e.g. 
+
+Quote = Dwight you Ignorant slut!
+Author = Michael Scott
+Date = 02 June 2023
+
+-------------------------------------------------------------------------------------------------------------------------------------------
