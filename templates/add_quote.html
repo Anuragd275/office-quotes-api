@@ -1,25 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Post Quote</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Quotes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+    <style>
+
+        h1, h2, p, a, ul, input, .ip-area{
+            font-family: Inter, sans-serif;
+        }
+
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+       input{
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+        padding: 0.3rem 0.6rem;
+       }
+       
+       button{
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        cursor: pointer;
+       }
+    </style>
 </head>
 <body>
-    <h1>Post Quote</h1>
-    
-    <form action="/add/" method="post">
+    <div class="wrapper">
+        <h1>Post Quote</h1>
         <div>
-            <label for="quote">Quote:</label>
-            <input type="text" id="quote" name="quote" required>
+            <form action="/add/" method="post">
+                <div class="ip-area">
+                    <input type="text" id="quote" name="quote" placeholder="quote" required>
+                </div>
+                
+                <div class="ip-area">
+                    <input type="text" id="author" name="author" placeholder="author" required>
+                </div>
+                
+                <div class="ip-area">
+                    <button type="submit">Post Quote</button>
+                </div>
+            </form>
         </div>
-        
-        <div>
-            <label for="author">Author:</label>
-            <input type="text" id="author" name="author" required>
-        </div>
-        
-        <div>
-            <button type="submit">Post Quote</button>
-        </div>
-    </form>
+    </div>
 </body>
 </html>
