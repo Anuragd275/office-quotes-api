@@ -37,6 +37,10 @@ For detailed information about each endpoint and the expected request/response f
 
 Contributions to the Quotes API project are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request. Make sure to follow the project's code style and guidelines.
 
+## Want to add Quotes?
+
+Just Add Your quotes and author in add_quotes.txt & I'll take care of the rest or you can use the API Endpoint which will instantly add your data to the database.
+
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as per the terms of the license.
