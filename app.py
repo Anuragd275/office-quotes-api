@@ -1,7 +1,16 @@
 from flask import *
 import json, time
-import random as ran
-from db import *
+from bson.objectid import ObjectId
+from pymongo import MongoClient
+
+# Connect to MongoDB
+client = MongoClient("mongodb+srv://admin:root-admin@first.cndzcil.mongodb.net/?retryWrites=true&w=majority")
+
+# Select Database
+db = client.get_database('first')
+
+#Select collection
+collection = db.office_quotes
 
 app = Flask(__name__)
 
@@ -48,11 +57,11 @@ def add_quote():
 
 @app.route('/delete/', methods=['GET', 'POST', 'DELETE'])
 def delete_quote():
-    if request.method == 'POST':
-        quote_id = request.form.get('ID')
+    if  request.method == 'DELETE'or request.method == 'POST':
+        quote_id = request.form.get('quote_ID')
 
         # Delete the quote from MongoDB
-        collection.delete_one({'_id': f"ObjectId('{quote_id}')"})
+        collection.delete_one({'_id': ObjectId(quote_id)})
 
         # Redirect to a success page or render a success message
         return (f"Deleted this: ObjectId('{quote_id}')")
