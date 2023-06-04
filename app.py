@@ -14,12 +14,22 @@ collection = db.office_quotes
 
 app = Flask(__name__)
 
+
 @app.route('/', methods=['GET', 'POST'])
 def home_page():
     return render_template('index.html')
 
 @app.route('/quote/', methods=['GET'])
 def get_quote():
+
+    def quote_fetcher():
+        # Fetch quotes from MongoDB
+        db_quotes = collection.find({},{
+            'quote': 1,
+            'author':1
+        })
+        return(list(db_quotes))
+
     current_time = time.strftime("%Y-%m-%d %H:%M:%S")
     data_set = {'Page': 'Quote', 'Message': "Successfully landed on quotes page", 'quotes': f'{quote_fetcher()}', 'Time': current_time}
     json_dump = json.dumps(data_set)
@@ -27,6 +37,17 @@ def get_quote():
 
 @app.route('/limit/', methods=['GET'])
 def limit_quote_fetcher():
+
+    
+    def limited_quote_fetcher(limit_value):
+        limit_value = int(limit_value)
+        # Fetch quotes from MongoDB
+        quotes = collection.find({},{
+            'quote': 1,
+            'author':1
+            }).limit(limit_value)
+        return(list(quotes))
+
     limited_value = str(request.args.get('limit'))
     data_set = {'Status': 'Successful', 'Message': f'Results {limited_quote_fetcher(limited_value)}'}
     json_dump = json.dumps(data_set)
