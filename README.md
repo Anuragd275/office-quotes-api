@@ -26,10 +26,9 @@ The Quotes API is a RESTful web service that allows you to manage and retrieve q
 
 ## API Endpoints
 
-- `GET /quotes`: Retrieve a list of all quotes.
-- `POST /quotes`: Create a new quote.
-- `PUT /quotes/{id}`: Update an existing quote.
-- `DELETE /quotes/{id}`: Delete a quote.
+- `GET /quote`: Retrieve a list of all quotes.
+- `POST /add`: Create a new quote.
+- `DELETE /delete`: Delete a quote.
 
 For detailed information about each endpoint and the expected request/response formats, refer to the API documentation.
 
