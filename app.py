@@ -14,7 +14,6 @@ collection = db.office_quotes
 
 app = Flask(__name__)
 
-
 @app.route('/', methods=['GET', 'POST'])
 def home_page():
     return render_template('index.html')
@@ -37,7 +36,6 @@ def get_quote():
 
 @app.route('/limit/', methods=['GET'])
 def limit_quote_fetcher():
-
     
     def limited_quote_fetcher(limit_value):
         limit_value = int(limit_value)
@@ -69,7 +67,6 @@ def add_quote():
         
         # Insert the values into MongoDB
         collection.insert_one({'quote': quote, 'author': author})
-
         # Redirect to a success page or render a success message
         return 'Values inserted successfully'
     
@@ -83,13 +80,11 @@ def delete_quote():
 
         # Delete the quote from MongoDB
         collection.delete_one({'_id': ObjectId(quote_id)})
-
         # Redirect to a success page or render a success message
         return (f"Deleted this: ObjectId('{quote_id}')")
     
     # Render the HTML form
     return render_template('delete_quote.html')
-
 
 if __name__ == '__main__':
     app.run(port=5600)
