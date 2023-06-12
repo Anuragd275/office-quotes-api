@@ -51,6 +51,20 @@ def limit_quote_fetcher():
     json_dump = json.dumps(data_set)
     return json_dump
 
+@app.route('/author/', methods=['GET'])
+def get_quote_by_author():
+    def quote_by_author(authhor_name):
+        db_quote_artist = collection.find({},{
+            'quote': 1,
+            'author': authhor_name,
+        })
+        return(list(db_quote_artist))
+    
+    author_name = str(request.args.get('author'))
+    data_set = {'Status': 'Successful', 'Message':f'Results{quote_by_author(author_name)}'}
+    json_dump = json.dumps(data_set)
+    return json_dump
+
 @app.route('/user/', methods=['GET'])
 def user_page():
     current_time = time.strftime("%Y-%m-%d %H:%M:%S")
