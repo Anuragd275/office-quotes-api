@@ -2,6 +2,10 @@
 
 The Quotes API is a RESTful web service that allows you to manage and retrieve quotes from a MongoDB database. It provides endpoints to create, read, update, and delete quotes.
 
+---
+![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue) · ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) · ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
+
+---
 ## Features
 
 - Create a new quote with a quote text and author.
