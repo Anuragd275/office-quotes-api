@@ -13,6 +13,9 @@ db = client.get_database('first')
 
 # Select collection
 collection = db.office_quotes
+users = db.users
+
+# Create a Flask Instance
 
 app = Flask(__name__)
 
@@ -20,6 +23,25 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def home_page():
     return render_template('index.html')
+
+
+@app.route('/signup/', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        email_value = request.form.get('email_field')
+        password_value = request.form.get('password_field')
+
+        users.insert_one({'email': email_value, 'password': password_value})
+        return 'User created successfully'
+
+    # Render the HTML form
+
+    return render_template('signup.html')
+
+
+@app.route('/signin/', methods=['GET', 'POST'])
+def login():
+    return render_template('signin.html')
 
 
 @app.route('/quote/', methods=['GET'])

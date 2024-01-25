@@ -39,7 +39,7 @@
         >
           Sign Up
         </h2>
-        <form class="space-y-4">
+        <form class="space-y-4" method="post" action="/signup">
           <div class="space-y-1">
             <label
               class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-lg dark:text-gray-100"
@@ -47,10 +47,11 @@
               >Email</label
             ><input
               class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-sm"
-              id="email"
+              id="email_field"
+              name="email_field"
               placeholder="Enter your email"
               required=""
-              type="email"
+              type="text"
             />
           </div>
           <div class="space-y-1">
@@ -60,17 +61,18 @@
               >Password</label
             ><input
               class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-sm"
-              id="password"
+              id="password_field"
+              name="password_field"
               placeholder="Enter your password"
               required=""
-              type="password"
+              type="text"
             />
           </div>
           <button
             class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full text-lg bg-black text-white dark:bg-white dark:text-black"
             type="submit"
           >
-            <a href="/signup"> Sign Up </a>
+            <a href="/signup/"> Sign Up </a>
           </button>
         </form>
         <p class="text-lg text-center text-gray-600 text-sm dark:text-gray-400">
