@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CUSTOM JS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Reset input values on page load
+        document.querySelectorAll("input").forEach(function (input) {
+          input.value = "";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!--
+// Generated with v0 by Vercel.
+// https://v0.dev/t/r4BvJLQqoB2
+-->
+
+    <div
+      class="flex items-center justify-center h-screen bg-white dark:bg-black"
+      style="font-family: Inter"
+    >
+      <div
+        class="w-full max-w-md p-8 space-y-4 bg-white rounded shadow-md dark:bg-black"
+      >
+        <h2
+          class="text-4xl font-bold text-center text-gray-900 dark:text-gray-100"
+        >
+          Sign Up
+        </h2>
+        <form class="space-y-4">
+          <div class="space-y-1">
+            <label
+              class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-lg dark:text-gray-100"
+              for="email"
+              >Email</label
+            ><input
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-sm"
+              id="email"
+              placeholder="Enter your email"
+              required=""
+              type="email"
+            />
+          </div>
+          <div class="space-y-1">
+            <label
+              class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-lg dark:text-gray-100"
+              for="password"
+              >Password</label
+            ><input
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-sm"
+              id="password"
+              placeholder="Enter your password"
+              required=""
+              type="password"
+            />
+          </div>
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full text-lg bg-black text-white dark:bg-white dark:text-black"
+            type="submit"
+          >
+            <a href="/signup"> Sign Up </a>
+          </button>
+        </form>
+        <p class="text-lg text-center text-gray-600 text-sm dark:text-gray-400">
+          Already a user?
+          <a class="text-blue-500 hover:underline" href="signin">Sign in</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
