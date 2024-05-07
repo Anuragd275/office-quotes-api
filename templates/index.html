@@ -2,115 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Office Quotes API</title>
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-      h1,
-      h2,
-      h3,
-      ul {
-        font-family: Inter, sans-serif;
-      }
-
-      .wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      a,
-      ul,
-      li {
-        text-decoration: none;
-        color: #5256f4;
-      }
-
-      li {
-        font-size: 1.4rem;
-      }
-
-      a:visited {
-        color: #5256f4;
-      }
-
-      footer {
-        font-family: Inter, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 5rem;
-      }
-
-      #footer-link {
-        padding: 1rem 2rem;
-        border: 2px solid #000;
-      }
-    </style>
   </head>
   <body>
-    <div class="wrapper">
-      <h1>Office Quotes API</h1>
-      <h2>All available Endpoints of API:</h2>
-      <ul>
-        <li>
-          <a
-            href="https://office-quotes-api.onrender.com/quote/"
-            target="_blank"
-            >Get all Quotes</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://office-quotes-api.onrender.com/limit/?limit=5"
-            target="_blank"
-            >Get limited Quotes</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://office-quotes-api.onrender.com/author/?author=Michael%20Scott"
-            >Get Quotes by Author</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://office-quotes-api.onrender.com/user/?user=user"
-            target="_blank"
-            >User Endpoint</a
-          >
-        </li>
-        <li>
-          <a href="https://office-quotes-api.onrender.com/add/" target="_blank"
-            >Add new Quotes</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://office-quotes-api.onrender.com/delete/"
-            target="_blank"
-            >Delete quotes</a
-          >
-        </li>
-      </ul>
-    </div>
-    <footer>
-      <div>
+    <!--
+    // v0 by Vercel.
+    // https://v0.dev/t/qfKPBjwSG2M
+    -->
+
+    <section
+      style="font-family: Inter"
+      class="h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-black text-gray-800 dark:text-gray-100"
+    >
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 text-center">
+        Get your favorite Quotes from "The Office"
+      </h1>
+      <p class="text-xl md:text-2xl text-center mb-8 px-4">
+        SIgn up and start fecthing!!!
+      </p>
+
+      <div class="flex items-center py-2">
         <a
-          href="https://github.com/Anuragd275/office-quotes-api"
-          id="footer-link"
-          >GitHub Repo</a
+          class="whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 flex-shrink-0 bg-gray-700 hover:bg-gray-800 border-gray-700 hover:border-gray-800 text-sm border-4 text-white py-1 px-2 rounded cursor-pointer"
+          href="signup.html"
         >
+          Get Started
+        </a>
       </div>
-    </footer>
+    </section>
   </body>
 </html>
