@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in</title>
+    <title>Error while Signing in</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,6 +31,10 @@
         >
           Sign In
         </h2>
+
+        <h4 class="text-sm text-center text-red-600">
+          Incorrect Username or Password
+        </h4>
         <form class="space-y-4">
           <div class="space-y-1">
             <label
@@ -62,14 +66,12 @@
             class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full text-lg bg-black text-white dark:bg-white dark:text-black"
             type="submit"
           >
-            <a href="/signin/"> Sign In </a>
+            <a href="/signin"> Sign In </a>
           </button>
         </form>
         <p class="text-lg text-center text-gray-600 text-sm dark:text-gray-400">
           New user?
-          <a class="text-blue-500 hover:underline" href="signin.html"
-            >Sign Up</a
-          >
+          <a class="text-blue-500 hover:underline" href="signin">Sign Up</a>
         </p>
       </div>
     </div>
