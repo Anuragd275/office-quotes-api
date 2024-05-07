@@ -32,7 +32,7 @@ def signup():
         password_value = request.form.get('password_field')
 
         users.insert_one({'email': email_value, 'password': password_value})
-        return 'User created successfully'
+        return render_template('signup200.html')
 
     # Render the HTML form
 
@@ -41,6 +41,14 @@ def signup():
 
 @app.route('/signin/', methods=['GET', 'POST'])
 def login():
+    if request.method == 'POST':
+        email_value = request.form.get('email_field')
+        password_value = request.form.get('password_field')
+
+        if users.find_one({'email': email_value, 'password': password_value}):
+            return render_template('index.html')
+        else:
+            return render_template('signin404.html')
     return render_template('signin.html')
 
 
